@@ -55,13 +55,13 @@ def main():
     # Setup logging and script timing
     logging.basicConfig(filename=args.log, filemode='w', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
     logging.info('----- Start')
-    logging.info(f"# {os.path.basename(__file__)} #")
+    logging.info("# {} #".format(os.path.basename(__file__)))
     timeStart = time.time()
     vcfStats(args.input, args.output)
     timeEnd = time.time()
     # End of run
     logging.info('----- Finish')
-    logging.info(f"Elapsed time: {timeEnd - timeStart}")
+    logging.info("Elapsed time: {}".format(timeEnd - timeStart))
 
 if __name__ == '__main__':
     # Main function
